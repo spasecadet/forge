@@ -7,7 +7,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  flex: 1 0 0;
+  padding: 20px;
+}
+
+.remainingSpace {
+  flex: 1 0 0;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 3px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+input, select {
+  min-height: 30px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background-color: #4287f5;
+  padding: 10px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 800px) {
+  .page {
+    flex-direction: row;
+  }
+
+  .formContainer {
+    flex: 1 0 0;
+  }
+
+  .remainingSpace {
+    flex: 2 0 0;
+  }
 }
